@@ -1,0 +1,72 @@
+/*
++---------------------------------------------------+
+|                       Date                        |
++---------------------------------------------------+
+| - day: int                                        |
+| - month: String                                   |
+| - year: int                                       |
++---------------------------------------------------+
+| + Date()                                          |
+| + Date(day: int, month: String, year: int)        |
+| + getDay(): int / + setDay(day: int): void        |
+| + getMonth(): String / + setMonth(m: String): void|
+| + getYear(): int / + setYear(year: int): void     |
+| + toString(): String                              |
++---------------------------------------------------+
+
++----------------------------------------------------------------+
+|                      Person                                    |
++----------------------------------------------------------------+
+| - name: String                                                 |
+| - surname: String                                              |
+| - age: int                                                     |
+| - bDate: Date                                                  |
++----------------------------------------------------------------+
+| + Person()                                                     |
+| + Person(name: String, surname: String)                        |
+| + Person(name: String, surname: String, age: int, bDate: Date) |
+| + getName(): String / + setName(n: String): void               |
+| + getSurname(): String / + setSurname(s: String): void         |
+| + getAge(): int / + setAge(a: int): void                       |
+| + getBDate(): Date / + setBDate(d: Date): void                 |
+| + toString(): String                                           |
++----------------------------------------------------------------+
+
++---------------------------------------------------------------------------------------+
+|                      Account                                                          |
++---------------------------------------------------------------------------------------+
+| # id: int                                                                             |
+| # balance: double                                                                     |
+| # annualInterestRate: double                                                          |
+| # dateCreated: Date                                                                   |
+| # objPerson: Person                                                                   |
++---------------------------------------------------------------------------------------+
+| + Account()                                                                           |
+| + Account(id: int, balance: double)                                                   |
+| + Account(id: int, balance: double, rate: double, person: Person, dateCreated: Date)  |
+| + getId(): int / + setId(id: int): void                                               |
+| + getBalance(): double / + setBalance(b: double): void                                |
+| + getAnnualInterestRate(): double                                                     |
+| + setAnnualInterestRate(rate: double): void                                           |
+| + getDateCreated(): Date / + setDateCreated(d: Date): void                            |
+| + getObjPerson(): Person / + setObjPerson(p: Person): void                            |
+| + getMonthlyInterestRate(): double                                                    |
+| + getMonthlyInterest(): double                                                        |
+| + withdraw(amount: double): void                                                      |
+| + deposit(amount: double): void                                                       |
+| + transferMoney(acc1: Account, amount: double): void                                  |
+| + toString(): String                                                                  |
++---------------------------------------------------------------------------------------+
+                         ^
+                         | (Inheritance)
+         +---------------+---------------+
+         |                               |
++--------------------------+  +--------------------------+
+|      SavingAccount       |  |        FixAccount        |
++--------------------------+  +--------------------------+
+| + SavingAccount(...)     |  | + FixAccount(...)        |
+| + transferMoney(...)     |  | + withdraw(...)          |
+|                          |  | + transferMoney(...)     |
++--------------------------+  +--------------------------+
+
+*/
